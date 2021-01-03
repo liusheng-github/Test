@@ -1,0 +1,77 @@
+#Standard output options
+log4j.rootLogger=INFO,ddesapl,ddessock,ddesdebg
+log4j.logger.ddesapl=INFO,ddesapl
+log4j.logger.ddessock=INFO,ddessock
+log4j.logger.ddesdebg=INFO,ddesdebg
+log4j.logger.jdbc.audit=OFF
+log4j.additivity.jdbc.audit=false
+log4j.logger.jdbc.resultset=OFF
+log4j.additivity.jdbc.resultset=false
+log4j.logger.jdbc.sqlonly=INFO,sql
+log4j.additivity.jdbc.sqlonly=false
+log4j.logger.jdbc.sqltiming=OFF
+log4j.additivity.jdbc.sqltiming=false
+log4j.logger.jdbc.connection=OFF
+log4j.additivity.jdbc.connection=false
+
+#the appender used for the JDBC API layer call logging above, sql only
+log4j.appender.sql=org.apache.log4j.ConsoleAppender
+log4j.appender.sql.Threshold=INFO
+log4j.appender.sql.layout = org.apache.log4j.PatternLayout
+log4j.appender.sql.layout.ConversionPattern=ddes[%t]:%-d{yyyy/MM/dd HH:mm:ss.SSS} %m%n
+log4j.appender.sql.Encoding=GBK
+log4j.additivity.sql=false
+
+#Server.log configuration
+log4j.appender.ddesapl=org.apache.log4j.ConsoleAppender
+log4j.appender.ddesapl.Threshold=INFO
+log4j.appender.ddesapl.layout = org.apache.log4j.PatternLayout
+log4j.appender.ddesapl.layout.ConversionPattern=ddes[%t]:%-d{yyyy/MM/dd HH:mm:ss.SSS} %m%n
+log4j.appender.ddesapl.Encoding=GBK
+log4j.additivity.ddesapl=false
+
+log4j.appender.ddessock=org.apache.log4j.ConsoleAppender
+log4j.appender.ddessock.Threshold=INFO
+log4j.appender.ddessock.layout = org.apache.log4j.PatternLayout
+log4j.appender.ddessock.layout.ConversionPattern=ddes:[%t]:%m%n
+log4j.appender.ddessock.Encoding=GBK
+log4j.additivity.ddessock=false
+
+log4j.appender.ddesdebg=org.apache.log4j.ConsoleAppender
+log4j.appender.ddesdebg.layout = org.apache.log4j.PatternLayout
+log4j.appender.ddesdebg.layout.ConversionPattern=ddes[%t]:%-d{yyyy/MM/dd HH:mm:ss.SSS} %m%n
+log4j.appender.ddesdebg.Encoding=GBK
+log4j.additivity.ddesdebg=false
+
+#ddesapl.log configuration.
+#log4j.appender.ddesapl=org.apache.log4j.net.SyslogAppender
+#log4j.appender.ddesapl.SyslogHost=10.167.38.134
+#log4j.appender.ddesapl.Facility=LOCAL0
+#log4j.appender.ddesapl.Threshold=INFO
+#log4j.appender.ddesapl.layout = org.apache.log4j.PatternLayout
+#log4j.appender.ddesapl.layout.ConversionPattern=ddes[%t]:%-d{yyyy/MM/dd HH:mm:ss.SSS} %m
+#log4j.appender.ddesapl.Encoding=GBK
+#log4j.additivity.ddesapl=false
+
+#log4j.appender.ddessock=org.apache.log4j.net.SyslogAppender
+#log4j.appender.ddessock.SyslogHost=10.167.38.134
+#log4j.appender.ddessock.Facility=LOCAL1
+#log4j.appender.ddessock.Threshold=INFO
+#log4j.appender.ddessock.layout = org.apache.log4j.PatternLayout
+#log4j.appender.ddessock.layout.ConversionPattern=ddes:[%t]:%m
+#log4j.appender.ddessock.Encoding=GBK
+#log4j.additivity.ddessock=false
+
+#log4j.appender.ddesdebg=org.apache.log4j.net.SyslogAppender
+#log4j.appender.ddesdebg.SyslogHost=10.167.38.134
+#log4j.appender.ddesdebg.Facility=LOCAL2
+#log4j.appender.ddesdebg.layout = org.apache.log4j.PatternLayout
+#log4j.appender.ddesdebg.layout.ConversionPattern=ddes[%t]:%-d{yyyy/MM/dd HH:mm:ss.SSS} %m
+#log4j.appender.ddesdebg.Encoding=GBK
+#log4j.additivity.ddesdebg=false
+
+#ddes output options
+log4j.logger.org.ajax4jsf=WARN
+log4j.logger.com.sun.faces=WARN
+log4j.logger.javax.faces=WARN
+org.apache.log4j=INFO
